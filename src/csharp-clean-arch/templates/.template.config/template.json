@@ -1,3 +1,48 @@
 {
-    "$schema": "https://json.schemastore.org/template"
+    "$schema": "https://json.schemastore.org/template",
+    "author": "Lucimarck J S Dias",
+    "classifications": [
+        "Web"
+    ],
+    "identity": "System.Templates.Architectures.CleanArchitecture.CSharp",
+    "groupIdentity": "System.Templates.Architectures.CleanArchitecture",
+    "name": ".NET Clean Architecure Templates (C#)",
+    "shortName": "clean-arch-csharp",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "Project1",
+    "preferNameDirectory": true,
+    "symbols": {
+        "includeTests": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "true"           
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "exclude": [
+                        "**/[Bb]in/**",
+                        "**/[Oo]bj/**",
+                        ".template.config/**/*",
+                        "**/*.filelist",
+                        "**/*.user",
+                        "**/*.lock.json",
+                        "Project1.Solution.sln"
+                    ]
+                },
+                {
+                    "condition": "(!includeTests)",
+                    "exclude": [
+                        "Project1.UnitTests/**/*",
+                        "Project1.FunctionalTests/**/*"
+                    ]
+                }
+            ]
+        }
+    ]
 }
