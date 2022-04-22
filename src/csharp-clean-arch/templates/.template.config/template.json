@@ -2,12 +2,15 @@
     "$schema": "https://json.schemastore.org/template",
     "author": "Lucimarck J S Dias",
     "classifications": [
-        "Web"
+        "Common",
+        "Library",
+        "Web",
+        "WebAPI"
     ],
     "identity": "System.Templates.Architectures.CleanArchitecture.CSharp",
     "groupIdentity": "System.Templates.Architectures.CleanArchitecture",
-    "name": ".NET Clean Architecure Templates (C#)",
-    "shortName": "clean-arch-csharp",
+    "name": ".NET Clean Architecure Project",
+    "shortName": "clean-arch",
     "tags": {
         "language": "C#",
         "type": "project"
@@ -15,10 +18,17 @@
     "sourceName": "Project1",
     "preferNameDirectory": true,
     "symbols": {
+        "includeSeedWork": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "displayName": "Include SeedWork Domain files."
+        },
         "includeTests": {
             "type": "parameter",
             "datatype": "bool",
-            "defaultValue": "true"           
+            "defaultValue": "true",
+            "displayName": "Include Tests projects files."       
         }
     },
     "sources": [
@@ -33,6 +43,12 @@
                         "**/*.user",
                         "**/*.lock.json",
                         "Project1.Solution.sln"
+                    ]
+                },
+                {
+                    "condition": "(!includeSeedWork)",
+                    "exclude": [
+                        "Project1.Domain/Common/**/*"
                     ]
                 },
                 {

@@ -7,7 +7,7 @@
         <Title>.NET Clean Architecture Template</Title>
         <Authors>Lucimarck J S Dias</Authors>
         <Description>Templates to use when creating an application with Clean Architecture structure.</Description>
-        <PackageTags>dotnet-new;templates;contoso</PackageTags>
+        <PackageTags>dotnet-new;templates</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
