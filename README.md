@@ -9,7 +9,7 @@ Since [.NET 6](https://dotnet.microsoft.com/en-us/), the template installation c
 **Example**
 
 ```
-dotnet new --install .\src\csharp-clean-arch
+dotnet new --install .\src\csharp\clean-arch
 ```
 
 For the uninstallation, you can execute the command `dotnet new --uninstall` exatcly the same way for the installation process.
@@ -17,7 +17,7 @@ For the uninstallation, you can execute the command `dotnet new --uninstall` exa
 **Example**
 
 ```
-dotnet new --uninstall .\src\csharp-clean-arch
+dotnet new --uninstall .\src\csharp\clean-arch
 ```
 
 Considering that .NET provides the possibility to publish _nuget_ packages for templates distribution, in the future maybe they will be added here.
