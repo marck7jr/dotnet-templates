@@ -30,9 +30,9 @@ Inside this repository there are some templates organized by their respective su
 
 Here are the templates created following some popular development architectures.
 
-| Name | Short name | Languages |
-| -- | -- | -- |
-| .NET Clean Architecture Project | clean-arch | [C#]
+| Name | Short name | Languages | Tags |
+| -- | -- | -- | -- |
+| .NET Clean Architecture Project | clean-arch | [C#] | Common/Library/Web/WebAPI |
 
 # Related projects
 
