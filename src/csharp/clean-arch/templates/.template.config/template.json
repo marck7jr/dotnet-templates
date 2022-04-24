@@ -104,6 +104,15 @@
             "onlyIf": {
                 "after": "<LangVersion>"
             }
+        },
+        "shortName": {
+            "type": "parameter",
+            "datatype": "text",
+            "description": "Short name of the Project.",
+            "defaultValue": "Project1",
+            "isRequired": true,
+            "displayName": "Short Name",
+            "replaces": "Project1ShortName"
         }
     },
     "sources": [

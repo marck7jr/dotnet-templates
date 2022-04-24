@@ -4,9 +4,9 @@ using Project1.Infrastructure.Services;
 namespace Project1.Infrastructure.Extensions;
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddProject1Infrastructure(this IServiceCollection services)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
-        // TODO: Register services from Project1 Infrastructure
+        // TODO: Register services from Infrastructure layer.
         services.AddTransient<IDateTimeService, DateTimeService>();
 
         return services;

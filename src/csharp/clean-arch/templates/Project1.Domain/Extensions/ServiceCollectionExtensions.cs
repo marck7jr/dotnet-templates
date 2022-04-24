@@ -1,9 +1,9 @@
 namespace Project1.Domain.Extensions;
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddProject1Domain(this IServiceCollection services)
+    public static IServiceCollection AddDomain(this IServiceCollection services)
     {
-        // TODO: Register services from Project1 Domain
+        // TODO: Register services from Domain layer.
 
         return services;
     }
