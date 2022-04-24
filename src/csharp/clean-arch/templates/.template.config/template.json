@@ -18,6 +18,12 @@
     "sourceName": "Project1",
     "preferNameDirectory": true,
     "symbols": {
+        "includeDependencyInjection": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "true",
+            "displayName": "Include Dependency Injection project."
+        },
         "includeSeedWork": {
             "type": "parameter",
             "datatype": "bool",
@@ -49,6 +55,12 @@
                         "**/*.user",
                         "**/*.lock.json",
                         "Project1.Solution.sln"
+                    ]
+                },
+                {
+                    "condition": "(!includeDependencyInjection)",
+                    "exclude": [
+                        "Project1.Extensions.DependencyInjection/**/*"
                     ]
                 },
                 {
