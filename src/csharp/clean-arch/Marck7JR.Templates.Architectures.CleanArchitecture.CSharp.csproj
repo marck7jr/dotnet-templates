@@ -3,10 +3,10 @@
     <PropertyGroup>
         <PackageType>Template</PackageType>
         <PackageVersion>1.0</PackageVersion>
-        <PackageId>Marck7JR.Templates.Architectures.CleanArchitecture</PackageId>
-        <Title>.NET Clean Architecture Template</Title>
+        <PackageId>Marck7JR.Templates.Architectures.CleanArchitecture.CSharp</PackageId>
+        <Title>.NET Clean Architecture Template (C#)</Title>
         <Authors>Lucimarck J S Dias</Authors>
-        <Description>Templates to use when creating an application with Clean Architecture structure.</Description>
+        <Description>Templates to use when creating an application with Clean Architecture structure with C#.</Description>
         <PackageTags>dotnet-new;templates</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
 
