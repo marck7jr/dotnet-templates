@@ -1,0 +1,28 @@
+{
+    "symbolInfo": {
+        "includeSeedWork": {
+            "longName": "include-seed-work",
+            "shortName": "isw"
+        },
+        "includePersistence": {            
+            "longName": "include-persistence",
+            "shortName": "ip"
+        },
+        "includeTests": {
+            "longName": "include-tests",
+            "shortName": "it"
+        },
+        "targetFramework": {
+            "longName": "framework",
+            "shortName": "f"
+        },
+        "langVersion": {
+            "longName": "lang-version",
+            "shortName": "lv"
+        },
+        "shortName": {
+            "longName": "short-name",
+            "shortName": "sn"
+        }
+    }
+}
