@@ -18,12 +18,6 @@
     "sourceName": "Project1",
     "preferNameDirectory": true,
     "symbols": {
-        "includeDependencyInjection": {
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "true",
-            "displayName": "Include Dependency Injection project."
-        },
         "includeSeedWork": {
             "type": "parameter",
             "datatype": "bool",
@@ -130,12 +124,6 @@
                     ]
                 },
                 {
-                    "condition": "(!includeDependencyInjection)",
-                    "exclude": [
-                        "Project1.Extensions.DependencyInjection/**/*"
-                    ]
-                },
-                {
                     "condition": "(!includePersistence)",
                     "exclude": [
                         "Project1.Infrastructure.Persistence/**/*"
@@ -150,8 +138,9 @@
                 {
                     "condition": "(!includeTests)",
                     "exclude": [
-                        "Project1.UnitTests/**/*",
-                        "Project1.FunctionalTests/**/*"
+                        "Project1.Extensions.DependencyInjection/**/*",
+                        "Project1.FunctionalTests/**/*",
+                        "Project1.UnitTests/**/*"
                     ]
                 }
             ]
