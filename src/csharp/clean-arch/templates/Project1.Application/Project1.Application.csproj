@@ -2,4 +2,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Project1.Domain\Project1.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="10.4.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.4.0" />
+  </ItemGroup>
 </Project>
