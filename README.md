@@ -39,6 +39,7 @@ Here are the templates created following some popular development architectures.
 You should take a look at these related projects:
 
 - [Template Engine](https://github.com/dotnet/templating/)
+- [Template Samples](https://github.com/dotnet/dotnet-template-samples)
 - [.NET Core](https://github.com/dotnet/core)
 - [ASP.NET](https://github.com/aspnet)
 - [Mono](https://github.com/mono)

@@ -21,8 +21,14 @@
         "includeSeedWork": {
             "type": "parameter",
             "datatype": "bool",
-            "defaultValue": "false",
+            "defaultValue": "true",
             "displayName": "Include SeedWork Domain files."
+        },
+        "includePersistence": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "true",
+            "displayName": "Include Persistence layer files."
         },
         "includeTests": {
             "type": "parameter",
@@ -43,6 +49,12 @@
                         "**/*.user",
                         "**/*.lock.json",
                         "Project1.Solution.sln"
+                    ]
+                },
+                {
+                    "condition": "(!includePersistence)",
+                    "exclude": [
+                        "Project1.Infrastructure.Persistence/**/*"
                     ]
                 },
                 {
