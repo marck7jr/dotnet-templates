@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <GitVersionBaseDirectory>$(MSBuildThisFileDirectory)</GitVersionBaseDirectory>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.0</PackageVersion>
         <PackageId>Marck7JR.Templates.Architectures.CleanArchitecture.CSharp</PackageId>
         <Title>.NET Clean Architecture Template (C#)</Title>
         <Authors>Lucimarck J S Dias</Authors>
@@ -27,5 +25,4 @@
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
     </ItemGroup>
-
 </Project>
