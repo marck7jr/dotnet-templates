@@ -1,149 +1,160 @@
 {
-    "$schema": "https://json.schemastore.org/template",
-    "author": "Lucimarck J S Dias",
-    "classifications": [
-        "Common",
-        "Library",
-        "Web",
-        "WebAPI"
-    ],
-    "identity": "System.Templates.Architectures.CleanArchitecture.CSharp",
-    "groupIdentity": "System.Templates.Architectures.CleanArchitecture",
-    "name": ".NET Clean Architecure Project",
-    "shortName": "clean-arch",
-    "tags": {
-        "language": "C#",
-        "type": "project"
+  "$schema": "https://json.schemastore.org/template",
+  "author": "Lucimarck J S Dias",
+  "classifications": ["Common", "Library", "Web", "WebAPI"],
+  "identity": "System.Templates.Architectures.CleanArchitecture.CSharp",
+  "groupIdentity": "System.Templates.Architectures.CleanArchitecture",
+  "name": ".NET Clean Architecure Project",
+  "shortName": "clean-arch",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Project1",
+  "preferNameDirectory": true,
+  "forms": {
+    "ValueAfterLastDot": {
+      "identifier": "replace",
+      "pattern": "^.*\\.(?=[^\\.]+$)",
+      "replacement": ""
     },
-    "sourceName": "Project1",
-    "preferNameDirectory": true,
-    "symbols": {
-        "includeSeedWork": {
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "true",
-            "displayName": "Include SeedWork Domain files."
-        },
-        "includePersistence": {
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "true",
-            "displayName": "Include Persistence layer files."
-        },
-        "includeTests": {
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "true",
-            "displayName": "Include Tests projects files."       
-        },
-        "targetFramework": {
-            "type": "parameter",
-            "datatype": "choice",
-            "choices": [
-                {
-                    "choice": "net7.0",
-                    "description": "Target all projects to use .NET 7.0.",
-                    "displayName": ".NET 7.0"
-                },
-                {
-                    "choice": "net6.0",
-                    "description": "Target all projects to use .NET 6.0.",
-                    "displayName": ".NET 6.0"
-                }
-            ],
-            "defaultValue": "net7.0",
-            "description": "Choose which .NET version to target in all projects.",
-            "displayName": "Target Framework",
-            "isRequired": true,
-            "replaces": "net7.0",
-            "onlyIf": {
-                "after": "<TargetFramework>"
-            }
-        },
-        "langVersion": {
-            "type": "parameter",
-            "datatype": "choice",
-            "choices": [
-                {
-                    "choice": "preview",
-                    "description": "Target all projects to use C# Preview Language Version.",
-                    "displayName": "Preview"
-                },
-                {                    
-                    "choice": "latest",
-                    "description": "Target all projects to use C# Latest Language Version.",
-                    "displayName": "C# Latest"
-                },
-                {                    
-                    "choice": "latestMajor",
-                    "description": "Target all projects to use C# Latest Major Language Version.",
-                    "displayName": "C# Latest Major"
-                },
-                {                    
-                    "choice": "11",
-                    "description": "Target all projects to use C# 11 Language Version.",
-                    "displayName": "C# 11"
-                },
-                {                    
-                    "choice": "10",
-                    "description": "Target all projects to use C# 10 Language Version.",
-                    "displayName": "C# 10"
-                }
-            ],
-            "defaultValue": "latestMajor",
-            "description": "Choose which C# Language Version to use in all projects.",
-            "displayName": "C# Language Version",
-            "isRequired": true,
-            "replaces": "preview",
-            "onlyIf": {
-                "after": "<LangVersion>"
-            }
-        },
-        "shortName": {
-            "type": "parameter",
-            "datatype": "text",
-            "description": "Short name of the Project.",
-            "defaultValue": "Project1",
-            "isRequired": true,
-            "displayName": "Short Name",
-            "replaces": "Project1ShortName"
-        }
+    "DbContextName": {
+        "identifier": "replace",
+        "pattern": "$",
+        "replacement": "DbContext"
+    }
+  },
+  "symbols": {
+    "includeDefaultFiles": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "displayName": "Include default files."
     },
-    "sources": [
+    "includePersistenceProjects": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "displayName": "Include Persistence layer files."
+    },
+    "includeTestProjects": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "displayName": "Include Tests projects files."
+    },
+    "targetFramework": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
         {
-            "modifiers": [
-                {
-                    "exclude": [
-                        "**/[Bb]in/**",
-                        "**/[Oo]bj/**",
-                        ".template.config/**/*",
-                        "**/*.filelist",
-                        "**/*.user",
-                        "**/*.lock.json",
-                        "Project1.Solution.sln"
-                    ]
-                },
-                {
-                    "condition": "(!includePersistence)",
-                    "exclude": [
-                        "Project1.Infrastructure.Persistence/**/*"
-                    ]
-                },
-                {
-                    "condition": "(!includeSeedWork)",
-                    "exclude": [
-                        "Project1.Domain/Common/**/*"
-                    ]
-                },
-                {
-                    "condition": "(!includeTests)",
-                    "exclude": [
-                        "Project1.Extensions.DependencyInjection/**/*",
-                        "Project1.FunctionalTests/**/*",
-                        "Project1.UnitTests/**/*"
-                    ]
-                }
-            ]
+          "choice": "net7.0",
+          "description": "Target all projects to use .NET 7.0.",
+          "displayName": ".NET 7.0"
+        },
+        {
+          "choice": "net6.0",
+          "description": "Target all projects to use .NET 6.0.",
+          "displayName": ".NET 6.0"
         }
-    ]
+      ],
+      "defaultValue": "net7.0",
+      "description": "Choose which .NET version to target in all projects.",
+      "displayName": "Target Framework",
+      "replaces": "net7.0",
+      "onlyIf": {
+        "after": "<TargetFramework>"
+      }
+    },
+    "langVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "preview",
+          "description": "Target all projects to use C# Preview Language Version.",
+          "displayName": "Preview"
+        },
+        {
+          "choice": "latest",
+          "description": "Target all projects to use C# Latest Language Version.",
+          "displayName": "C# Latest"
+        },
+        {
+          "choice": "latestMajor",
+          "description": "Target all projects to use C# Latest Major Language Version.",
+          "displayName": "C# Latest Major"
+        },
+        {
+          "choice": "11",
+          "description": "Target all projects to use C# 11 Language Version.",
+          "displayName": "C# 11"
+        },
+        {
+          "choice": "10",
+          "description": "Target all projects to use C# 10 Language Version.",
+          "displayName": "C# 10"
+        }
+      ],
+      "defaultValue": "latestMajor",
+      "description": "Choose which C# Language Version to use in all projects.",
+      "displayName": "C# Language Version",
+      "replaces": "preview",
+      "onlyIf": {
+        "after": "<LangVersion>"
+      }
+    },
+    "shortName": {
+      "type": "derived",
+      "valueSource": "name",
+      "valueTransform": "ValueAfterLastDot"
+    },
+    "dbContextName": {
+        "type": "derived",
+        "valueSource": "shortName",
+        "valueTransform": "DbContextName",
+        "fileRename": "Project1DbContext",
+        "replaces": "Project1DbContext"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/[Bb]in/**",
+            "**/[Oo]bj/**",
+            ".template.config/**/*",
+            "**/*.filelist",
+            "**/*.user",
+            "**/*.lock.json",
+            "Project1.Solution.sln"
+          ]
+        },
+        {
+          "condition": "(!includePersistenceProjects)",
+          "exclude": ["Project1.Infrastructure.Persistence/**/*"]
+        },
+        {
+          "condition": "(!includeTestProjects)",
+          "exclude": [
+            "Project1.Extensions.DependencyInjection/**/*",
+            "Project1.FunctionalTests/**/*",
+            "Project1.UnitTests/**/*"
+          ]
+        },
+        {
+          "condition": "(!includeDefaultFiles)",
+          "exclude": [
+            "Project1.Application/Behaviors/**/**",
+            "Project1.Application/Interfaces/**/**",
+            "Project1.Domain/Common/**/**",
+            "Project1.Domain/Exceptions/**/**",
+            "Project1.Infrastructure/Services/**/**",
+            "Project1.Infrastructure.Persistence/Repositories/**/**"
+          ]
+        }
+      ]
+    }
+  ]
 }

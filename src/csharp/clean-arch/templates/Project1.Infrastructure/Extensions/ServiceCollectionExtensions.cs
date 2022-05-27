@@ -7,8 +7,9 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
         // TODO: Register services from Infrastructure layer.
+#if (includeDefaultFiles)        
         services.AddTransient<IDateTimeService, DateTimeService>();
-
+#endif
         return services;
     }
 }

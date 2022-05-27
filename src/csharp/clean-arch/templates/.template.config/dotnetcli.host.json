@@ -1,28 +1,24 @@
 {
     "symbolInfo": {
-        "includeSeedWork": {
-            "longName": "include-seed-work",
-            "shortName": "isw"
+        "includeDefaultFiles": {
+            "longName": "default-files",
+            "shortName": "default"
         },
-        "includePersistence": {            
-            "longName": "include-persistence",
-            "shortName": "ip"
+        "includePersistenceProjects": {
+            "longName": "persistence-projects",
+            "shortName": "persistences"
         },
-        "includeTests": {
-            "longName": "include-tests",
-            "shortName": "it"
+        "includeTestProjects": {
+            "longName": "test-projects",
+            "shortName": "tests"
         },
         "targetFramework": {
-            "longName": "framework",
-            "shortName": "f"
+            "longName": "target-framework",
+            "shortName": "framework"
         },
         "langVersion": {
-            "longName": "lang-version",
-            "shortName": "lv"
-        },
-        "shortName": {
-            "longName": "short-name",
-            "shortName": "sn"
+            "longName": "version",
+            "shortName": "version"
         }
     }
 }

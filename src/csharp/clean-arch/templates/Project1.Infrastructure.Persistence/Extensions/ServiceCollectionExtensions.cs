@@ -4,7 +4,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddPersistence(this IServiceCollection services)
     {
         // TODO: Register services from Infrastructure Persistence layer.
-        services.AddDbContext<Project1ShortNameDbContext>(options => 
+        services.AddDbContext<Project1DbContext>(options => 
         {
 
         });
