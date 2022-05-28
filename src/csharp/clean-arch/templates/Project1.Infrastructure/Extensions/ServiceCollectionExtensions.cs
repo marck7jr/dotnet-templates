@@ -1,5 +1,7 @@
+#if (includeDefaultFiles)        
 using Project1.Application.Interfaces;
 using Project1.Infrastructure.Services;
+#endif
 
 namespace Project1.Infrastructure.Extensions;
 public static class ServiceCollectionExtensions
