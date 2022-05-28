@@ -34,6 +34,12 @@ Here are the templates created following some popular development architectures.
 | -- | -- | -- | -- |
 | .NET Clean Architecture Project | clean-arch | [C#] | Common/Library/Web/WebAPI |
 
+# FAQ
+
+#### I reinstalled the template locally, but the changes that I made wasn't applied, what I could do?
+
+Uninstall the template and run the .NET CLI command `dotnet new --list` or open Visual Studio 2022 and wait for the templates listing to finish, this will force to remove all references from older version. After that, reinstall the template and relaunch the template listing command. Now the templated instaled will sync with your current changes.
+
 # Related projects
 
 You should take a look at these related projects:
