@@ -18,10 +18,15 @@
       "pattern": "^.*\\.(?=[^\\.]+$)",
       "replacement": ""
     },
-    "DbContextName": {
+    "ValueWithDbContextSuffix": {
         "identifier": "replace",
         "pattern": "$",
         "replacement": "DbContext"
+    },
+    "ValueWithAddPrefix": {
+        "identifier": "replace",
+        "pattern": "^",
+        "replacement": "Add"
     }
   },
   "symbols": {
@@ -112,9 +117,15 @@
     "dbContextName": {
         "type": "derived",
         "valueSource": "shortName",
-        "valueTransform": "DbContextName",
+        "valueTransform": "ValueWithDbContextSuffix",
         "fileRename": "Project1DbContext",
         "replaces": "Project1DbContext"
+    },
+    "addServicesMethodName": {
+      "type": "derived",
+      "valueSource": "shortName",
+      "valueTransform": "ValueWithAddPrefix",
+      "replaces": "AddProject1"
     }
   },
   "sources": [

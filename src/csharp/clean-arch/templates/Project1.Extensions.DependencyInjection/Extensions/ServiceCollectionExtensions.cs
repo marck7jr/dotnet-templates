@@ -6,7 +6,7 @@ using Project1.Infrastructure.Persistence.Extensions;
 namespace Microsoft.Extensions.DependencyInjection;
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddProject1ShortName(this IServiceCollection services)
+    public static IServiceCollection AddProject1(this IServiceCollection services)
     {
         // TODO: Register services from all projects of Project1ShortName.
         services.AddDomain();
