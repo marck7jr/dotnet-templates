@@ -1,8 +1,0 @@
-{
-  "install": "System.Templates.Architectures.CleanArchitecture.CSharp",
-  "create": "",
-  "name": "Tests",
-  "tasks": [
-      
-  ]
-}
