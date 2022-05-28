@@ -1,7 +1,9 @@
 using Project1.Application.Extensions;
 using Project1.Domain.Extensions;
 using Project1.Infrastructure.Extensions;
+#if (!includePersistence)
 using Project1.Infrastructure.Persistence.Extensions;
+#endif
 
 namespace Microsoft.Extensions.DependencyInjection;
 public static class ServiceCollectionExtensions
@@ -12,7 +14,7 @@ public static class ServiceCollectionExtensions
         services.AddDomain();
         services.AddApplication();
         services.AddInfrastructure();
-#if (includePersistence)
+#if (!includePersistence)
         services.AddPersistence();
 #endif
 
