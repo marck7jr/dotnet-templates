@@ -3,7 +3,7 @@
     <ProjectReference Include="..\Project1.Application\Project1.Application.csproj" />
     <ProjectReference Include="..\Project1.Domain\Project1.Domain.csproj" />
     <ProjectReference Include="..\Project1.Infrastructure\Project1.Infrastructure.csproj" />
-    <!--#if (!includePersistence)-->
+    <!--#if (includePersistenceProjects)-->
     <ProjectReference Include="..\Project1.Infrastructure.Persistence\Project1.Infrastructure.Persistence.csproj" />
     <!--#endif-->
   </ItemGroup>

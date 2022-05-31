@@ -1,7 +1,7 @@
 using Project1.Application.Extensions;
 using Project1.Domain.Extensions;
 using Project1.Infrastructure.Extensions;
-#if (!includePersistence)
+#if (includePersistenceProjects)
 using Project1.Infrastructure.Persistence.Extensions;
 #endif
 
@@ -14,7 +14,7 @@ public static class ServiceCollectionExtensions
         services.AddDomain();
         services.AddApplication();
         services.AddInfrastructure();
-#if (!includePersistence)
+#if (includePersistenceProjects)
         services.AddPersistence();
 #endif
 
